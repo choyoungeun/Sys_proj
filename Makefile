@@ -1,11 +1,12 @@
-all: ls2 myls
+all: write0 mywrite
 
-ls2: ls2.o
-	gcc -o ls2 ls2.o -lpthread
-myls: myls.o
-	gcc -o myls myls.o -lpthread
-
-ls2.o: ls2.c
-	gcc -c -o ls2.o ls2.c
-myls.o: myls.c
-	gcc -c -o myls.o myls.c
+write0: write0.o
+	gcc -o write0 write0.o -lpthread
+mywrite: mywrite.o
+	gcc -o mywrite mywrite.o -lpthread
+	
+write0.o: write0.c
+	gcc -c -o write0.o write0.c
+mywrite.o: mywrite.c
+	gcc -c -o mywrite.o mywrite.c
+ 
